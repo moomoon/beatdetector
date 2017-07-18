@@ -1,0 +1,12 @@
+Carthage
+.DS_Store
+Pods
+*.xcworkspace/xcuserdata/*.xcuserdatad/
+*.xcodeproj/xcuserdata/*.xcuserdatad/
+*.xcodeproj/project.xcworkspace/xcuserdata/*.xcuserdatad/
+build/
+RealmSwift.framework/
+Realm.framework/
+**.mp4
+**.mp3
+**.m4a

@@ -1,0 +1,845 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4739414AD5029A7DCBF7FAB0 /* Pods_beatdetectorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 418CF7FC2D75740033739ED7 /* Pods_beatdetectorTests.framework */; };
+		5032BD2654917565B684D1DF /* Pods_beatdetectorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18DC070473CF8701347273F /* Pods_beatdetectorUITests.framework */; };
+		5BBEEACFEB25587F14A56B23 /* Pods_beatdetector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A5E85542E71D35071BF916B /* Pods_beatdetector.framework */; };
+		8D3151CE1F1DE5190062E2D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3151CD1F1DE5190062E2D0 /* AppDelegate.swift */; };
+		8D3151D01F1DE5190062E2D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3151CF1F1DE5190062E2D0 /* ViewController.swift */; };
+		8D3151D31F1DE5190062E2D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D3151D11F1DE5190062E2D0 /* Main.storyboard */; };
+		8D3151D51F1DE5190062E2D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D3151D41F1DE5190062E2D0 /* Assets.xcassets */; };
+		8D3151D81F1DE5190062E2D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D3151D61F1DE5190062E2D0 /* LaunchScreen.storyboard */; };
+		8D3151E31F1DE5190062E2D0 /* beatdetectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3151E21F1DE5190062E2D0 /* beatdetectorTests.swift */; };
+		8D3151EE1F1DE5190062E2D0 /* beatdetectorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3151ED1F1DE5190062E2D0 /* beatdetectorUITests.swift */; };
+		8D31520B1F1DE5740062E2D0 /* BeatDetector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D3151FF1F1DE5740062E2D0 /* BeatDetector.cpp */; };
+		8D31520D1F1DE5740062E2D0 /* read.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8D3152021F1DE5740062E2D0 /* read.txt */; };
+		8D83AEF11F1E03E1009118EC /* BeatDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83AEF01F1E03E1009118EC /* BeatDetector.swift */; };
+		8D83AEF31F1E0D9A009118EC /* AudioDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83AEF21F1E0D9A009118EC /* AudioDecoder.swift */; };
+		8D83AEF81F1E0DE6009118EC /* RxSwiftExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83AEF71F1E0DE6009118EC /* RxSwiftExtensions.swift */; };
+		8D83AEFA1F1E0DFB009118EC /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83AEF91F1E0DFB009118EC /* Operators.swift */; };
+		8D83AEFC1F1F07E3009118EC /* DispatchQueueExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83AEFB1F1F07E3009118EC /* DispatchQueueExtensions.swift */; };
+		8D83AF001F1F29A8009118EC /* audio.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8D83AEFF1F1F29A7009118EC /* audio.m4a */; };
+		8D83AF021F1F30D2009118EC /* 甩葱歌.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8D83AF011F1F30D1009118EC /* 甩葱歌.mp3 */; };
+		8D83AF041F1F355F009118EC /* 慢一点.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8D83AF031F1F355E009118EC /* 慢一点.mp3 */; };
+		8D83AF061F1F3D96009118EC /* xraydog.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8D83AF051F1F3D96009118EC /* xraydog.mp3 */; };
+		8D83AF081F1F41FA009118EC /* test.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8D83AF071F1F41FA009118EC /* test.m4a */; };
+		8D83AF0A1F1F436E009118EC /* test.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8D83AF091F1F436D009118EC /* test.mp3 */; };
+		8D83AF0C1F1F53D1009118EC /* 04 - This Must Be It.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8D83AF0B1F1F53D0009118EC /* 04 - This Must Be It.mp3 */; };
+		8D83AF0E1F1F5921009118EC /* 1771936327_11121651_l.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8D83AF0D1F1F5921009118EC /* 1771936327_11121651_l.mp3 */; };
+		8D83AF101F1F5A6A009118EC /* 2067155_11121628_l.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8D83AF0F1F1F5A6A009118EC /* 2067155_11121628_l.mp3 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8D3151DF1F1DE5190062E2D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8D3151C21F1DE5190062E2D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D3151C91F1DE5190062E2D0;
+			remoteInfo = beatdetector;
+		};
+		8D3151EA1F1DE5190062E2D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8D3151C21F1DE5190062E2D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D3151C91F1DE5190062E2D0;
+			remoteInfo = beatdetector;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2DD311CA9936552E4CF2AD7E /* Pods-beatdetectorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beatdetectorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-beatdetectorTests/Pods-beatdetectorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		418CF7FC2D75740033739ED7 /* Pods_beatdetectorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_beatdetectorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5174AE519DCB94E3310DFF48 /* Pods-beatdetectorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beatdetectorUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-beatdetectorUITests/Pods-beatdetectorUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5CFBD0C5551BE69FC001B862 /* Pods-beatdetectorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beatdetectorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-beatdetectorTests/Pods-beatdetectorTests.release.xcconfig"; sourceTree = "<group>"; };
+		8D3151CA1F1DE5190062E2D0 /* beatdetector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = beatdetector.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D3151CD1F1DE5190062E2D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8D3151CF1F1DE5190062E2D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8D3151D21F1DE5190062E2D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8D3151D41F1DE5190062E2D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8D3151D71F1DE5190062E2D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8D3151D91F1DE5190062E2D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D3151DE1F1DE5190062E2D0 /* beatdetectorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = beatdetectorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D3151E21F1DE5190062E2D0 /* beatdetectorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beatdetectorTests.swift; sourceTree = "<group>"; };
+		8D3151E41F1DE5190062E2D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D3151E91F1DE5190062E2D0 /* beatdetectorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = beatdetectorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D3151ED1F1DE5190062E2D0 /* beatdetectorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beatdetectorUITests.swift; sourceTree = "<group>"; };
+		8D3151EF1F1DE5190062E2D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D3151FF1F1DE5740062E2D0 /* BeatDetector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BeatDetector.cpp; sourceTree = "<group>"; };
+		8D3152001F1DE5740062E2D0 /* BeatDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeatDetector.h; sourceTree = "<group>"; };
+		8D3152011F1DE5740062E2D0 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		8D3152021F1DE5740062E2D0 /* read.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = read.txt; sourceTree = "<group>"; };
+		8D3152071F1DE5740062E2D0 /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
+		8D3152081F1DE5740062E2D0 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
+		8D3152091F1DE5740062E2D0 /* SoundManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SoundManager.cpp; sourceTree = "<group>"; };
+		8D31520A1F1DE5740062E2D0 /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundManager.h; sourceTree = "<group>"; };
+		8D3152141F1DECAA0062E2D0 /* libfmodL_iphoneos.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfmodL_iphoneos.a; path = "../FMOD Programmers API/api/lowlevel/lib/libfmodL_iphoneos.a"; sourceTree = "<group>"; };
+		8D83AEEF1F1E03C9009118EC /* beatdetector-bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "beatdetector-bridging.h"; sourceTree = SOURCE_ROOT; };
+		8D83AEF01F1E03E1009118EC /* BeatDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeatDetector.swift; sourceTree = "<group>"; };
+		8D83AEF21F1E0D9A009118EC /* AudioDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDecoder.swift; sourceTree = "<group>"; };
+		8D83AEF71F1E0DE6009118EC /* RxSwiftExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftExtensions.swift; sourceTree = "<group>"; };
+		8D83AEF91F1E0DFB009118EC /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
+		8D83AEFB1F1F07E3009118EC /* DispatchQueueExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueExtensions.swift; sourceTree = "<group>"; };
+		8D83AEFF1F1F29A7009118EC /* audio.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio.m4a; path = ../../Desktop/audio.m4a; sourceTree = "<group>"; };
+		8D83AF011F1F30D1009118EC /* 甩葱歌.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "甩葱歌.mp3"; path = "../../Desktop/甩葱歌.mp3"; sourceTree = "<group>"; };
+		8D83AF031F1F355E009118EC /* 慢一点.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "慢一点.mp3"; path = "../../Desktop/慢一点.mp3"; sourceTree = "<group>"; };
+		8D83AF051F1F3D96009118EC /* xraydog.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = xraydog.mp3; path = ../../Downloads/xraydog.mp3; sourceTree = "<group>"; };
+		8D83AF071F1F41FA009118EC /* test.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = test.m4a; path = ../../Desktop/test.m4a; sourceTree = "<group>"; };
+		8D83AF091F1F436D009118EC /* test.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = test.mp3; path = ../../Desktop/test.mp3; sourceTree = "<group>"; };
+		8D83AF0B1F1F53D0009118EC /* 04 - This Must Be It.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "04 - This Must Be It.mp3"; path = "../../Downloads/04 - This Must Be It.mp3"; sourceTree = "<group>"; };
+		8D83AF0D1F1F5921009118EC /* 1771936327_11121651_l.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 1771936327_11121651_l.mp3; path = ../../Downloads/1771936327_11121651_l.mp3; sourceTree = "<group>"; };
+		8D83AF0F1F1F5A6A009118EC /* 2067155_11121628_l.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 2067155_11121628_l.mp3; path = ../../Downloads/2067155_11121628_l.mp3; sourceTree = "<group>"; };
+		9A5E85542E71D35071BF916B /* Pods_beatdetector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_beatdetector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF89576CBEA2AB33253F7C4F /* Pods-beatdetector.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beatdetector.release.xcconfig"; path = "Pods/Target Support Files/Pods-beatdetector/Pods-beatdetector.release.xcconfig"; sourceTree = "<group>"; };
+		D0701B4AB55EADB2F9899174 /* Pods-beatdetector.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beatdetector.debug.xcconfig"; path = "Pods/Target Support Files/Pods-beatdetector/Pods-beatdetector.debug.xcconfig"; sourceTree = "<group>"; };
+		E18DC070473CF8701347273F /* Pods_beatdetectorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_beatdetectorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF19AEFEEB2A10CC486C1219 /* Pods-beatdetectorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beatdetectorUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-beatdetectorUITests/Pods-beatdetectorUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D3151C71F1DE5190062E2D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BBEEACFEB25587F14A56B23 /* Pods_beatdetector.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D3151DB1F1DE5190062E2D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4739414AD5029A7DCBF7FAB0 /* Pods_beatdetectorTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D3151E61F1DE5190062E2D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5032BD2654917565B684D1DF /* Pods_beatdetectorUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		60966D6F1167462EB033270C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D0701B4AB55EADB2F9899174 /* Pods-beatdetector.debug.xcconfig */,
+				AF89576CBEA2AB33253F7C4F /* Pods-beatdetector.release.xcconfig */,
+				2DD311CA9936552E4CF2AD7E /* Pods-beatdetectorTests.debug.xcconfig */,
+				5CFBD0C5551BE69FC001B862 /* Pods-beatdetectorTests.release.xcconfig */,
+				EF19AEFEEB2A10CC486C1219 /* Pods-beatdetectorUITests.debug.xcconfig */,
+				5174AE519DCB94E3310DFF48 /* Pods-beatdetectorUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8D3151C11F1DE5190062E2D0 = {
+			isa = PBXGroup;
+			children = (
+				8D83AEEF1F1E03C9009118EC /* beatdetector-bridging.h */,
+				8D83AF011F1F30D1009118EC /* 甩葱歌.mp3 */,
+				8D83AF0F1F1F5A6A009118EC /* 2067155_11121628_l.mp3 */,
+				8D83AF0D1F1F5921009118EC /* 1771936327_11121651_l.mp3 */,
+				8D83AF031F1F355E009118EC /* 慢一点.mp3 */,
+				8D83AF091F1F436D009118EC /* test.mp3 */,
+				8D83AF051F1F3D96009118EC /* xraydog.mp3 */,
+				8D83AF0B1F1F53D0009118EC /* 04 - This Must Be It.mp3 */,
+				8D83AEFF1F1F29A7009118EC /* audio.m4a */,
+				8D83AF071F1F41FA009118EC /* test.m4a */,
+				8D3151FE1F1DE5740062E2D0 /* beat */,
+				8D3151CC1F1DE5190062E2D0 /* beatdetector */,
+				8D3151E11F1DE5190062E2D0 /* beatdetectorTests */,
+				8D3151EC1F1DE5190062E2D0 /* beatdetectorUITests */,
+				8D3151CB1F1DE5190062E2D0 /* Products */,
+				8D3152131F1DECAA0062E2D0 /* Frameworks */,
+				60966D6F1167462EB033270C /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		8D3151CB1F1DE5190062E2D0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D3151CA1F1DE5190062E2D0 /* beatdetector.app */,
+				8D3151DE1F1DE5190062E2D0 /* beatdetectorTests.xctest */,
+				8D3151E91F1DE5190062E2D0 /* beatdetectorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8D3151CC1F1DE5190062E2D0 /* beatdetector */ = {
+			isa = PBXGroup;
+			children = (
+				8D83AEF61F1E0DDC009118EC /* extensions */,
+				8D3151CD1F1DE5190062E2D0 /* AppDelegate.swift */,
+				8D3151CF1F1DE5190062E2D0 /* ViewController.swift */,
+				8D3151D11F1DE5190062E2D0 /* Main.storyboard */,
+				8D3151D41F1DE5190062E2D0 /* Assets.xcassets */,
+				8D3151D61F1DE5190062E2D0 /* LaunchScreen.storyboard */,
+				8D3151D91F1DE5190062E2D0 /* Info.plist */,
+				8D83AEF01F1E03E1009118EC /* BeatDetector.swift */,
+				8D83AEF21F1E0D9A009118EC /* AudioDecoder.swift */,
+				8D83AEF91F1E0DFB009118EC /* Operators.swift */,
+			);
+			path = beatdetector;
+			sourceTree = "<group>";
+		};
+		8D3151E11F1DE5190062E2D0 /* beatdetectorTests */ = {
+			isa = PBXGroup;
+			children = (
+				8D3151E21F1DE5190062E2D0 /* beatdetectorTests.swift */,
+				8D3151E41F1DE5190062E2D0 /* Info.plist */,
+			);
+			path = beatdetectorTests;
+			sourceTree = "<group>";
+		};
+		8D3151EC1F1DE5190062E2D0 /* beatdetectorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8D3151ED1F1DE5190062E2D0 /* beatdetectorUITests.swift */,
+				8D3151EF1F1DE5190062E2D0 /* Info.plist */,
+			);
+			path = beatdetectorUITests;
+			sourceTree = "<group>";
+		};
+		8D3151FE1F1DE5740062E2D0 /* beat */ = {
+			isa = PBXGroup;
+			children = (
+				8D3151FF1F1DE5740062E2D0 /* BeatDetector.cpp */,
+				8D3152001F1DE5740062E2D0 /* BeatDetector.h */,
+				8D3152011F1DE5740062E2D0 /* main.cpp */,
+				8D3152021F1DE5740062E2D0 /* read.txt */,
+				8D3152071F1DE5740062E2D0 /* Scene.cpp */,
+				8D3152081F1DE5740062E2D0 /* Scene.h */,
+				8D3152091F1DE5740062E2D0 /* SoundManager.cpp */,
+				8D31520A1F1DE5740062E2D0 /* SoundManager.h */,
+			);
+			path = beat;
+			sourceTree = "<group>";
+		};
+		8D3152131F1DECAA0062E2D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D3152141F1DECAA0062E2D0 /* libfmodL_iphoneos.a */,
+				9A5E85542E71D35071BF916B /* Pods_beatdetector.framework */,
+				418CF7FC2D75740033739ED7 /* Pods_beatdetectorTests.framework */,
+				E18DC070473CF8701347273F /* Pods_beatdetectorUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8D83AEF61F1E0DDC009118EC /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8D83AEF71F1E0DE6009118EC /* RxSwiftExtensions.swift */,
+				8D83AEFB1F1F07E3009118EC /* DispatchQueueExtensions.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D3151C91F1DE5190062E2D0 /* beatdetector */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D3151F21F1DE5190062E2D0 /* Build configuration list for PBXNativeTarget "beatdetector" */;
+			buildPhases = (
+				2D1BCD0D70E1D1282DF9EE5A /* [CP] Check Pods Manifest.lock */,
+				8D3151C61F1DE5190062E2D0 /* Sources */,
+				8D3151C71F1DE5190062E2D0 /* Frameworks */,
+				8D3151C81F1DE5190062E2D0 /* Resources */,
+				A2203B38C8390ED9168BD2F0 /* [CP] Embed Pods Frameworks */,
+				F8C10F9F2FCEDEB19D2F36CF /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = beatdetector;
+			productName = beatdetector;
+			productReference = 8D3151CA1F1DE5190062E2D0 /* beatdetector.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8D3151DD1F1DE5190062E2D0 /* beatdetectorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D3151F51F1DE5190062E2D0 /* Build configuration list for PBXNativeTarget "beatdetectorTests" */;
+			buildPhases = (
+				A8FD85E98BCD539D42052C1C /* [CP] Check Pods Manifest.lock */,
+				8D3151DA1F1DE5190062E2D0 /* Sources */,
+				8D3151DB1F1DE5190062E2D0 /* Frameworks */,
+				8D3151DC1F1DE5190062E2D0 /* Resources */,
+				6C43079E294CC4AC74B86DEE /* [CP] Embed Pods Frameworks */,
+				592E98E090C133ABF3428146 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8D3151E01F1DE5190062E2D0 /* PBXTargetDependency */,
+			);
+			name = beatdetectorTests;
+			productName = beatdetectorTests;
+			productReference = 8D3151DE1F1DE5190062E2D0 /* beatdetectorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8D3151E81F1DE5190062E2D0 /* beatdetectorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D3151F81F1DE5190062E2D0 /* Build configuration list for PBXNativeTarget "beatdetectorUITests" */;
+			buildPhases = (
+				9AC24D0BB9D0C5BBD6EDF872 /* [CP] Check Pods Manifest.lock */,
+				8D3151E51F1DE5190062E2D0 /* Sources */,
+				8D3151E61F1DE5190062E2D0 /* Frameworks */,
+				8D3151E71F1DE5190062E2D0 /* Resources */,
+				8E971D89AD4CF2AA366C7174 /* [CP] Embed Pods Frameworks */,
+				2B6D8B9BD27132790E3A1A2B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8D3151EB1F1DE5190062E2D0 /* PBXTargetDependency */,
+			);
+			name = beatdetectorUITests;
+			productName = beatdetectorUITests;
+			productReference = 8D3151E91F1DE5190062E2D0 /* beatdetectorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8D3151C21F1DE5190062E2D0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = m;
+				TargetAttributes = {
+					8D3151C91F1DE5190062E2D0 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 48ACASQH47;
+						ProvisioningStyle = Automatic;
+					};
+					8D3151DD1F1DE5190062E2D0 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 9WK8JR6VTF;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8D3151C91F1DE5190062E2D0;
+					};
+					8D3151E81F1DE5190062E2D0 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 9WK8JR6VTF;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8D3151C91F1DE5190062E2D0;
+					};
+				};
+			};
+			buildConfigurationList = 8D3151C51F1DE5190062E2D0 /* Build configuration list for PBXProject "beatdetector" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8D3151C11F1DE5190062E2D0;
+			productRefGroup = 8D3151CB1F1DE5190062E2D0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D3151C91F1DE5190062E2D0 /* beatdetector */,
+				8D3151DD1F1DE5190062E2D0 /* beatdetectorTests */,
+				8D3151E81F1DE5190062E2D0 /* beatdetectorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D3151C81F1DE5190062E2D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D83AF041F1F355F009118EC /* 慢一点.mp3 in Resources */,
+				8D83AF0E1F1F5921009118EC /* 1771936327_11121651_l.mp3 in Resources */,
+				8D83AF081F1F41FA009118EC /* test.m4a in Resources */,
+				8D83AF101F1F5A6A009118EC /* 2067155_11121628_l.mp3 in Resources */,
+				8D3151D81F1DE5190062E2D0 /* LaunchScreen.storyboard in Resources */,
+				8D3151D51F1DE5190062E2D0 /* Assets.xcassets in Resources */,
+				8D83AF001F1F29A8009118EC /* audio.m4a in Resources */,
+				8D83AF0C1F1F53D1009118EC /* 04 - This Must Be It.mp3 in Resources */,
+				8D83AF021F1F30D2009118EC /* 甩葱歌.mp3 in Resources */,
+				8D83AF0A1F1F436E009118EC /* test.mp3 in Resources */,
+				8D31520D1F1DE5740062E2D0 /* read.txt in Resources */,
+				8D3151D31F1DE5190062E2D0 /* Main.storyboard in Resources */,
+				8D83AF061F1F3D96009118EC /* xraydog.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D3151DC1F1DE5190062E2D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D3151E71F1DE5190062E2D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2B6D8B9BD27132790E3A1A2B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-beatdetectorUITests/Pods-beatdetectorUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2D1BCD0D70E1D1282DF9EE5A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		592E98E090C133ABF3428146 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-beatdetectorTests/Pods-beatdetectorTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C43079E294CC4AC74B86DEE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-beatdetectorTests/Pods-beatdetectorTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E971D89AD4CF2AA366C7174 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-beatdetectorUITests/Pods-beatdetectorUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9AC24D0BB9D0C5BBD6EDF872 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A2203B38C8390ED9168BD2F0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-beatdetector/Pods-beatdetector-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8FD85E98BCD539D42052C1C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F8C10F9F2FCEDEB19D2F36CF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-beatdetector/Pods-beatdetector-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D3151C61F1DE5190062E2D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D31520B1F1DE5740062E2D0 /* BeatDetector.cpp in Sources */,
+				8D83AEF11F1E03E1009118EC /* BeatDetector.swift in Sources */,
+				8D83AEFA1F1E0DFB009118EC /* Operators.swift in Sources */,
+				8D3151D01F1DE5190062E2D0 /* ViewController.swift in Sources */,
+				8D83AEF31F1E0D9A009118EC /* AudioDecoder.swift in Sources */,
+				8D83AEFC1F1F07E3009118EC /* DispatchQueueExtensions.swift in Sources */,
+				8D3151CE1F1DE5190062E2D0 /* AppDelegate.swift in Sources */,
+				8D83AEF81F1E0DE6009118EC /* RxSwiftExtensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D3151DA1F1DE5190062E2D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D3151E31F1DE5190062E2D0 /* beatdetectorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D3151E51F1DE5190062E2D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D3151EE1F1DE5190062E2D0 /* beatdetectorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8D3151E01F1DE5190062E2D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D3151C91F1DE5190062E2D0 /* beatdetector */;
+			targetProxy = 8D3151DF1F1DE5190062E2D0 /* PBXContainerItemProxy */;
+		};
+		8D3151EB1F1DE5190062E2D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D3151C91F1DE5190062E2D0 /* beatdetector */;
+			targetProxy = 8D3151EA1F1DE5190062E2D0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8D3151D11F1DE5190062E2D0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8D3151D21F1DE5190062E2D0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8D3151D61F1DE5190062E2D0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8D3151D71F1DE5190062E2D0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8D3151F01F1DE5190062E2D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8D3151F11F1DE5190062E2D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8D3151F31F1DE5190062E2D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0701B4AB55EADB2F9899174 /* Pods-beatdetector.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				DEVELOPMENT_TEAM = 48ACASQH47;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../FMOD\\ Programmers\\ API/api/lowlevel/inc/",
+					"$(inherited)",
+					"$(SRCROOT)/beat/",
+				);
+				INFOPLIST_FILE = beatdetector/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dr.beatdetector;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/beatdetector-bridging.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		8D3151F41F1DE5190062E2D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF89576CBEA2AB33253F7C4F /* Pods-beatdetector.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				DEVELOPMENT_TEAM = 48ACASQH47;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../FMOD\\ Programmers\\ API/api/lowlevel/inc/",
+					"$(inherited)",
+					"$(SRCROOT)/beat/",
+				);
+				INFOPLIST_FILE = beatdetector/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dr.beatdetector;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/beatdetector-bridging.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		8D3151F61F1DE5190062E2D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DD311CA9936552E4CF2AD7E /* Pods-beatdetectorTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 9WK8JR6VTF;
+				INFOPLIST_FILE = beatdetectorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dr.beatdetectorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/beatdetector.app/beatdetector";
+			};
+			name = Debug;
+		};
+		8D3151F71F1DE5190062E2D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CFBD0C5551BE69FC001B862 /* Pods-beatdetectorTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 9WK8JR6VTF;
+				INFOPLIST_FILE = beatdetectorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dr.beatdetectorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/beatdetector.app/beatdetector";
+			};
+			name = Release;
+		};
+		8D3151F91F1DE5190062E2D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF19AEFEEB2A10CC486C1219 /* Pods-beatdetectorUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 9WK8JR6VTF;
+				INFOPLIST_FILE = beatdetectorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dr.beatdetectorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = beatdetector;
+			};
+			name = Debug;
+		};
+		8D3151FA1F1DE5190062E2D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5174AE519DCB94E3310DFF48 /* Pods-beatdetectorUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 9WK8JR6VTF;
+				INFOPLIST_FILE = beatdetectorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dr.beatdetectorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = beatdetector;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8D3151C51F1DE5190062E2D0 /* Build configuration list for PBXProject "beatdetector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D3151F01F1DE5190062E2D0 /* Debug */,
+				8D3151F11F1DE5190062E2D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D3151F21F1DE5190062E2D0 /* Build configuration list for PBXNativeTarget "beatdetector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D3151F31F1DE5190062E2D0 /* Debug */,
+				8D3151F41F1DE5190062E2D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D3151F51F1DE5190062E2D0 /* Build configuration list for PBXNativeTarget "beatdetectorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D3151F61F1DE5190062E2D0 /* Debug */,
+				8D3151F71F1DE5190062E2D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D3151F81F1DE5190062E2D0 /* Build configuration list for PBXNativeTarget "beatdetectorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D3151F91F1DE5190062E2D0 /* Debug */,
+				8D3151FA1F1DE5190062E2D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8D3151C21F1DE5190062E2D0 /* Project object */;
+}

@@ -1,0 +1,22 @@
+PODS:
+  - Curry (3.0.0)
+  - Runes (4.1.0)
+  - RxCocoa (3.5.0):
+    - RxSwift (~> 3.4)
+  - RxSwift (3.5.0)
+
+DEPENDENCIES:
+  - Curry
+  - Runes
+  - RxCocoa
+  - RxSwift
+
+SPEC CHECKSUMS:
+  Curry: eb3d2c75aec678b3cc7fb2729d2ad6dd121531d1
+  Runes: 72a67a5bbbe1b5fdae08b5a01b10c60d83fc69aa
+  RxCocoa: a0a09f45d0e5b48ecb6a4a7b4b4c89c88d3f633f
+  RxSwift: 18ee9d78b45edb3b0b7e79916b47a116e6dbc842
+
+PODFILE CHECKSUM: d0d009c9407645c61c8c727f6a50c57f8e69d5fa
+
+COCOAPODS: 1.2.0
