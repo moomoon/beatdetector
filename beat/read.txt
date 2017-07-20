@@ -1,5 +1,0 @@
-librairies:
-FMODEX
-SFML 1.6
-
-barsichou@yahoo.fr

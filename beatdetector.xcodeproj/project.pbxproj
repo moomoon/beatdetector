@@ -18,7 +18,6 @@
 		8D3151E31F1DE5190062E2D0 /* beatdetectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3151E21F1DE5190062E2D0 /* beatdetectorTests.swift */; };
 		8D3151EE1F1DE5190062E2D0 /* beatdetectorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3151ED1F1DE5190062E2D0 /* beatdetectorUITests.swift */; };
 		8D31520B1F1DE5740062E2D0 /* BeatDetector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D3151FF1F1DE5740062E2D0 /* BeatDetector.cpp */; };
-		8D31520D1F1DE5740062E2D0 /* read.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8D3152021F1DE5740062E2D0 /* read.txt */; };
 		8D83AEF11F1E03E1009118EC /* BeatDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83AEF01F1E03E1009118EC /* BeatDetector.swift */; };
 		8D83AEF31F1E0D9A009118EC /* AudioDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83AEF21F1E0D9A009118EC /* AudioDecoder.swift */; };
 		8D83AEF81F1E0DE6009118EC /* RxSwiftExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83AEF71F1E0DE6009118EC /* RxSwiftExtensions.swift */; };
@@ -72,12 +71,6 @@
 		8D3151EF1F1DE5190062E2D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D3151FF1F1DE5740062E2D0 /* BeatDetector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BeatDetector.cpp; sourceTree = "<group>"; };
 		8D3152001F1DE5740062E2D0 /* BeatDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeatDetector.h; sourceTree = "<group>"; };
-		8D3152011F1DE5740062E2D0 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		8D3152021F1DE5740062E2D0 /* read.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = read.txt; sourceTree = "<group>"; };
-		8D3152071F1DE5740062E2D0 /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
-		8D3152081F1DE5740062E2D0 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
-		8D3152091F1DE5740062E2D0 /* SoundManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SoundManager.cpp; sourceTree = "<group>"; };
-		8D31520A1F1DE5740062E2D0 /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundManager.h; sourceTree = "<group>"; };
 		8D3152141F1DECAA0062E2D0 /* libfmodL_iphoneos.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfmodL_iphoneos.a; path = "../FMOD Programmers API/api/lowlevel/lib/libfmodL_iphoneos.a"; sourceTree = "<group>"; };
 		8D83AEEF1F1E03C9009118EC /* beatdetector-bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "beatdetector-bridging.h"; sourceTree = SOURCE_ROOT; };
 		8D83AEF01F1E03E1009118EC /* BeatDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeatDetector.swift; sourceTree = "<group>"; };
@@ -215,12 +208,6 @@
 			children = (
 				8D3151FF1F1DE5740062E2D0 /* BeatDetector.cpp */,
 				8D3152001F1DE5740062E2D0 /* BeatDetector.h */,
-				8D3152011F1DE5740062E2D0 /* main.cpp */,
-				8D3152021F1DE5740062E2D0 /* read.txt */,
-				8D3152071F1DE5740062E2D0 /* Scene.cpp */,
-				8D3152081F1DE5740062E2D0 /* Scene.h */,
-				8D3152091F1DE5740062E2D0 /* SoundManager.cpp */,
-				8D31520A1F1DE5740062E2D0 /* SoundManager.h */,
 			);
 			path = beat;
 			sourceTree = "<group>";
@@ -374,7 +361,6 @@
 				8D83AF0C1F1F53D1009118EC /* 04 - This Must Be It.mp3 in Resources */,
 				8D83AF021F1F30D2009118EC /* 甩葱歌.mp3 in Resources */,
 				8D83AF0A1F1F436E009118EC /* test.mp3 in Resources */,
-				8D31520D1F1DE5740062E2D0 /* read.txt in Resources */,
 				8D3151D31F1DE5190062E2D0 /* Main.storyboard in Resources */,
 				8D83AF061F1F3D96009118EC /* xraydog.mp3 in Resources */,
 			);

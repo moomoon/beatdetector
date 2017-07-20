@@ -1,7 +1,6 @@
 #ifndef BEATDETECTOR_H
 #define BEATDETECTOR_H
 
-//#include "SoundManager.h"
 
 #ifdef __cplusplus
 #include <iostream>
