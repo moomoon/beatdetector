@@ -12,7 +12,7 @@ import AVFoundation
 
 class ViewController: UIViewController {
   let bag = DisposeBag()
-  let url = Bundle.main.url(forResource: "2067155_11121628_l", withExtension: "mp3")!
+  let url = Bundle.main.url(forResource: "1771936327_11121651_l", withExtension: "mp3")!
   lazy var player: AVPlayer = AVPlayer(url: self.url)
   var timeObserver: Any!
   var beat = false {
@@ -46,6 +46,7 @@ class ViewController: UIViewController {
 
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
+    print("did receive memory warning");
     // Dispose of any resources that can be recreated.
   }
 

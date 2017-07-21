@@ -10,10 +10,6 @@ class BeatDetector
 {
 public:
   BeatDetector(const float* ptr, uint32_t length);
-
-  float* get_energie1024();
-  float* get_energie44100();
-  bool* get_energie_peak();
   float* get_conv();
   float* get_beat();
   int get_tempo();
@@ -22,9 +18,6 @@ private:
 
   uint32_t length;    // en PCM
 
-  std::unique_ptr<float[]> energie1024; // energie of 1024 samples computed every 1024 pcm
-  std::unique_ptr<float[]> energie44100; // energie of 44100 samples computed every 1024 pcm
-  std::unique_ptr<bool[]> energie_peak; // les beat probables
   std::unique_ptr<float[]> conv; // la convolution avec un train d'impulsions
   std::unique_ptr<float[]> beat; // la beat line
   int tempo; // le tempo en BPMs

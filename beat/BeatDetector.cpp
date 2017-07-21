@@ -3,18 +3,15 @@
 #include <cmath>
 #include <vector>
 
-#define K_ENERGIE_RATIO  1.4 // le ratio entre les energie1024 et energie44100 pour la détection des peak d'energie
+//#define K_ENERGIE_RATIO  1.4 // le ratio entre les energie1024 et energie44100 pour la détection des peak d'energie
 #define K_TRAIN_DIMP_SIZE 108 // la taille du train d'impulsions pour la convolution (en pack de 1024 (430=10sec))
 
 using namespace std;
 
 BeatDetector::BeatDetector(const float* ptr, unsigned int length):
 length(length),
-energie1024(std::make_unique<float[]>(length / 1024)),
-energie44100(std::make_unique<float[]>(length / 1024)),
 conv(std::make_unique<float[]>(length / 1024)),
-beat(std::make_unique<float[]>(length / 1024)),
-energie_peak(std::make_unique<bool[]>(length / 1024 + 21))
+beat(std::make_unique<float[]>(length / 1024))
 {
   //    this->snd_mgr = snd_mgr;
   //    length = snd_mgr->get_length();
@@ -70,8 +67,24 @@ int BeatDetector::search_max(float* signal, int pos, int fenetre_half_size)
   return max_pos;
 }
 
+template <typename T>
+T calculate_c(const T* data, int length, const T& average) {
+  T somme(0);
+  for (int i = 0; i < length; i ++) {
+    auto deviation = data[i] - average;
+    somme += deviation * deviation;
+  }
+  return somme / length * -0.0025714 + 1.5142857;
+}
+
+
+
 void BeatDetector::audio_process(const float* data)
 {
+  auto energie1024(std::make_unique<float[]>(length / 1024));
+  auto energie44100(std::make_unique<float[]>(length / 1024));
+  auto energie_peak(std::make_unique<bool[]>(length / 1024 + 21));
+  std::unique_ptr<float[]> c(std::make_unique<float[]>(length / 1024));
   // recupere les données de la musique
   // ----------------------------------
   // le canal gauche
@@ -93,12 +106,14 @@ void BeatDetector::audio_process(const float* data)
     somme = somme + energie1024[i];
   }
   energie44100[0]=somme/43;
+  c[0] = calculate_c(energie1024.get(), 43, somme / 43);
 
   // pour toutes les autres, ...
   for(int i=1 ; i<length/1024; i++)
   {
     somme = somme - energie1024[i-1] + energie1024[i+42];
     energie44100[i] = somme/43;
+    c[i] = calculate_c(energie1024.get() + i, 43, somme / 43);
   }
 
   // Ratio energie1024/energie44100
@@ -108,8 +123,8 @@ void BeatDetector::audio_process(const float* data)
     // -21 pour centrer le energie1024 sur la seconde du energie44100
 //    if ()
 //    {
-      energie_peak[i]=energie1024[i]>K_ENERGIE_RATIO*energie44100[i-21];
-//    }
+//    std::cout << "accessing " << i - 21 << std::endl;
+      energie_peak[i] =energie1024[i]>c[i - 21]*energie44100[i-21];
   }
 
   // Calcul des BPMs
@@ -139,7 +154,7 @@ void BeatDetector::audio_process(const float* data)
   for(int i=0 ; i<86 ; i++) occurences_T[i] = 0;
   for(int i=1 ; i<T.size() ; i++)
   {
-    if(T[i]<=86) occurences_T[T[i]]++;
+    if(T[i]<86) occurences_T[T[i]]++;
   }
   int occ_max=0;
   for(int i=1 ; i<86 ; i++)
@@ -159,7 +174,6 @@ void BeatDetector::audio_process(const float* data)
 
   if (div==0) T_occ_moy = 0;
   else T_occ_moy = (float)(T_occ_max*occurences_T[T_occ_max] + (voisin) * occurences_T[voisin]) / div;
-  std::cout << "max = " << T_occ_max << "max count = " << occ_max << " div = " << div << " moyenn = " << T_occ_moy << std::endl;
   // clacul du tempo en BPMs
   tempo = (int)60.f/(T_occ_moy*(1024.f/44100.f));
 
@@ -227,21 +241,8 @@ void BeatDetector::audio_process(const float* data)
     beat[conv_max_pos_loc]=1.f;
     i=conv_max_pos_loc-T_occ_max;
   }
-}
 
-float* BeatDetector::get_energie1024(void)
-{
-  return energie1024.get();
-}
-
-float* BeatDetector::get_energie44100(void)
-{
-  return energie44100.get();
-}
-
-bool* BeatDetector::get_energie_peak(void)
-{
-  return energie_peak.get();
+  c.reset();
 }
 
 float* BeatDetector::get_conv()
